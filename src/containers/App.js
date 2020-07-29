@@ -40,7 +40,7 @@ class App extends Component {
         const filteredRobots = robots.filter(robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
-        if (!this.state.robots.length) {
+        if (!this.state.robots.length) { 
             return <h1>Loading</h1>
         } else {
         return (
@@ -51,11 +51,11 @@ class App extends Component {
                 <ErrorBoundry>
                 <CardList robots={filteredRobots}/>
                 </ErrorBoundry>
-            </Scroll>
+            </Scroll> 
             </div>
             );
         }
-    }
+    }  
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
